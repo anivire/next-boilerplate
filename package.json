@@ -16,7 +16,8 @@
     "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "react-responsive": "^10.0.0"
+    "react-responsive": "^10.0.0",
+    "unplugin-icons": "^0.19.3"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.252",
