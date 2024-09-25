@@ -1,24 +1,24 @@
 /** @type {import('next').NextConfig} */
-import Icons from "unplugin-icons/webpack";
+import Icons from 'unplugin-icons/webpack';
 
 export default {
-  webpack(config) {
+  reactStrictMode: true,
+  webpack: (config, { isServer, dev }) => {
+    if (dev) config.cache = false;
     config.plugins.push(
       Icons({
-        compiler: "jsx",
-        jsx: "react",
+        compiler: 'jsx',
+        jsx: 'react',
       })
     );
-
     return config;
   },
-  reactStrictMode: true,
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "**.hostname.com",
-        port: "",
+        protocol: 'https',
+        hostname: '**.hostname.com',
+        port: '',
       },
     ],
   },
